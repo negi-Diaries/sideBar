@@ -1,0 +1,308 @@
+/* google fonts cdn link  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+    font-family: 'Poppins',  sans-serif;
+}
+
+body{
+    
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    /* background-color: green; */
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80px;
+    background-color: #11101d;
+    padding: 6px 14px;
+    transition: all 0.4s ease;
+    /* background-color: red; */
+}
+
+.sidebar.active{
+    width: 240px;
+}
+
+
+.sidebar .logo-content .logo{
+    color: white;
+    display: flex;
+    /* font: optional; */
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .logo-content .logo{
+    opacity: 1;
+    pointer-events: none;
+}
+
+.logo-content .logo i{
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.logo-content .logo .logo-name{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sidebar #btn{
+    position: absolute;
+    top: 5px;
+    /* left: auto; */
+    color: white;
+    font-size: 23px;
+    height:50px;
+    width: 60px;
+    text-align: center;
+    /* background-color: red; */
+    /* transform: translateX(-50%); */
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.sidebar.active #btn{
+    width: 50px;
+    left: 80%;
+    
+}
+
+
+
+.sidebar ul{
+    margin-top: 10px;
+}   
+
+.sidebar ul li{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    /* margin: 0px 5px; */
+    list-style: none;
+    line-height: 50px;
+    /* background-color: red; */
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-radius: 5PX;
+    white-space: nowrap;
+}
+
+
+.sidebar ul li a:hover{
+    color: #11101d;
+    background-color: white;
+}
+
+.sidebar ul li  i{
+    height: 50px;
+    line-height: 50px;
+    /* background-color: green; */
+    border-radius: 12px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.sidebar ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding-left: 51px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #1d1b31;
+    color: white;
+}
+
+.sidebar ul li .links-name{
+    /* opacity: 0; */
+    display: none;
+    pointer-events: none;
+}
+
+.sidebar.active ul li .links-name{
+    /* opacity: 1; */
+    display: inline;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+
+
+.sidebar ul li .bx-search-alt-2{
+    position: absolute;
+    color: white;
+    z-index: 99;
+    height: 50px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.sidebar ul li .bx-search-alt-2:hover{
+    background-color: white;
+    color:#1d1b31 ;
+}
+
+.sidebar .profile-content{
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    width: 80px;
+    left: 0;
+    color: white;
+    background-color: #1d1b31;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .profile-content{
+    width: 240px;
+}
+
+.sidebar .profile-content i:hover{
+    color: black;
+}
+
+.sidebar .profile-content .profile{
+    /* background-color: red; */
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+}
+
+.profile-content .profile .profile-details{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    /* pointer-events: auto; */
+}
+
+.sidebar.active .profile .profile-details{
+    opacity: 1;
+    transition: all 1s ease;
+    /* pointer-events: auto; */
+}
+
+.profile-content .profile .profile-details img{
+    height: 45px;
+    width: 45px;
+    border-radius: 11px;
+    margin-right: 4px;
+    object-fit: cover;
+}
+
+
+.profile-details .name{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.profile-details .job{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.profile #logout{
+    position: absolute;
+    font-size: 20px;
+    right: 20px;
+    height: 31px;
+    top: 17px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sidebar.active .profile #logout{
+    top: 21px;
+}
+
+
+.home-content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all .4s ease;
+}
+
+.home-content .text{
+    font-size: 25px;
+    font-weight: 500;
+    color:  #1d1b31;
+    margin: 12px;
+}
+
+/* home content */
+.sidebar.active ~ .home-content{
+    width: calc(100% - 240px);
+    left: 240px;
+    transition: all .4s ease;
+    
+}
+
+.sidebar ul li .tooltip{
+    
+    position: absolute;
+    left: 67px;
+    top: 0;
+    transform: translateY(-50%,-50%);
+    height: 35px;
+    width: 122px;
+    line-height: 35px;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(0,0,0, 0.2);
+    border-radius: 6px;
+    text-align: center;
+    transition: 0s;
+    cursor: pointer;
+    /* pointer events is a very important code */
+    pointer-events: none ; 
+    opacity: 0;
+}
+
+.sidebar.active ul li .tooltip{
+    display: none;
+}
+
+
+
+.sidebar ul li:hover .tooltip{
+    transition: all 0.4s ease;
+    top: 15%;
+    opacity: 1 ;
+    
+}
+
